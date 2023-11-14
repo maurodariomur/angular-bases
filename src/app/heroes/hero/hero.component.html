@@ -1,0 +1,32 @@
+<h1>{{name}}</h1>
+<dl>
+  <dt>Name:</dt>
+  <dd>{{name}}</dd>
+
+  <dt>Age:</dt>
+  <dd>{{age}}</dd>
+
+  <dt>Method:</dt>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <dt>Capitalized:</dt>
+  <dd>{{nameCapitalized}}</dd>
+</dl>
+
+<button *ngIf ="name !== 'Spiderman'"
+(click)="chageHero()"
+class = "btn btn-primary mx-2">
+  Rename
+</button>
+
+<button *ngIf="age !== 16"
+(click)="chageAge()"
+class = "btn btn-primary">
+  Chage age
+</button>
+
+<button *ngIf = "name === 'Spiderman' && age === 16"
+(click)="resetForm()"
+class = "btn btn-primary mx-2">
+  Reset Form
+</button>
